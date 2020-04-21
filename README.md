@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It is a client that consumes an the Pick 'N Go API [https://github.com/samuelbwambale/pickNGo-API-with-servlets](here) to view it in the browser.
+This app is a client built in ReactJS that consumes an the Pick 'N Go API [here](https://github.com/samuelbwambale/pickNGo-API-with-servlets).
 
 ## Available Scripts
 
