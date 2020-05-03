@@ -36,11 +36,8 @@ const EditItemDialog = props => {
         setIsLoading(true);
         axios.put(`http://localhost:8083/pick_n_go_app_war_exploded/items?itemId=${itemId}`, form)
             .then(response => {
-                console.log("post item response -->>> ", response);
-                console.log(props.history)
                 setIsLoading(false);
                 setOpen(false);
-                // props.history.push(`/items`);
             })
     }
 
