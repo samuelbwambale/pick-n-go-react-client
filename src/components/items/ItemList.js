@@ -14,7 +14,6 @@ const ItemList = props => {
     setIsLoading(true);
     axios.get('http://localhost:8083/pick_n_go_app_war_exploded/items')
       .then(response => {
-        console.log("get all Items response -->>> ", response);
         setAllItems(response.data.data);
         setIsLoading(false);
       });

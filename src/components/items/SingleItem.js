@@ -3,8 +3,6 @@ import DeleteItemDialog from './DeleteItemDialog';
 import EditItemDialog from './EditItemDialog';
 
 
-
-
 const SingleItem = props => (
     <div className="card mb-5">
       <div className="container">
