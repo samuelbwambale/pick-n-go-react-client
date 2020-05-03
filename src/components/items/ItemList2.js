@@ -23,6 +23,7 @@ export class ItemList2 extends Component {
 
   render() {
     const { allItems } = this.props;
+    console.log('allItems in render ', allItems)
 
     return allItems.length > 0 ? (
       <div className="mb-3 mt-3">

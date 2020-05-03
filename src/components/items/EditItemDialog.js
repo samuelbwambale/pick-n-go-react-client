@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -10,11 +11,12 @@ import { IconButton } from '@material-ui/core';
 import { FormControl } from '@material-ui/core'
 import DialogTitle from '@material-ui/core/DialogTitle';
 import EditIcon from '@material-ui/icons/Edit';
-
+import { updateItem } from '../../actions/index';
 
 const EditItemDialog = props => {
     const [isLoading, setIsLoading] = useState(false);
     const [open, setOpen] = useState(false);
+    const dispatch = useDispatch();
 
     const { itemId, itemName, description, category} = props.item;
     const [form, setForm] = useState({
@@ -36,6 +38,8 @@ const EditItemDialog = props => {
         setIsLoading(true);
         axios.put(`http://localhost:8083/pick_n_go_app_war_exploded/items?itemId=${itemId}`, form)
             .then(response => {
+                console.log('update response', response)
+                dispatch(updateItem({ payload: response.data.data }));
                 setIsLoading(false);
                 setOpen(false);
             })
