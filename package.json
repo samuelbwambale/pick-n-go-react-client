@@ -11,7 +11,7 @@
     "assert": "^2.0.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
-    "follow-redirects": "^1.11.0",
+    "follow-redirects": "^1.14.7",
     "font-awesome": "^4.7.0",
     "material-ui": "^0.20.2",
     "react": "^16.13.1",
